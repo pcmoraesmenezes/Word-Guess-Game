@@ -8,6 +8,7 @@ A palavra deve ficar borrada de forma que a cada palavra descoberta pelo usuario
 a
 *a*a**
 """
+import os#Essa biblioteca servirá para limpar a tela do codigo apos o usuario acertar a palavra magica
 import random #Importando a biblioteca random para poder gerar palavras aleatorias
 letras = "abcdefhijklmnopqrstuvwxyz" #todas as letras possiveis que irão ser geradas na variavel
 tamanho = input("Informe o tamanho da palavra mágica que deseja descobrir ") #O tamanho desejado da palavra
@@ -35,5 +36,6 @@ while magica != palavra: #A reetição seguirá até o usuario encontrar a palav
     else:#Se não o usuario terá que digitar uma nova letra
          print("A letra não se encontra na palavra, tente novamente!")
          var = input()
+        os.system('cls' if os.name == 'nt' else 'clear')#Apagará todo o terminal para que o usuario so veja a mensagem a baixo
 print(f"Você encontrou a palavra!! A palavra era {palavra}")
 
